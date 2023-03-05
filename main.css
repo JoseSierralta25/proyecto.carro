@@ -1,0 +1,176 @@
+:root {
+    --max-width:1280px;
+    --min-width: 320px;
+    --accent-color: #00c2ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+html body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.book-appointment {
+    background-color: var(--accent-color);
+    padding: 1rem 2rem;
+    font-size: 24px;
+    border-radius: 4PX;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-width:var(--min-width);
+    background-image: url('./img/backgroundimage_1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 1s ease-in-out;
+
+}
+
+.header, .content, .footer {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    max-width: var(--max-width);
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+    
+    
+}
+
+.logo img {
+    margin-right: 0.5rem;
+    border-radius: 5PX;
+}
+
+.menu-list {
+
+    margin: 0;
+}
+
+.menu-list__item {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 24px;
+}
+
+
+.menu-list__item:last-child {
+    margin-right: 0;
+}
+
+
+
+.content {
+    
+    flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+
+}
+
+.slideButton {
+    position: absolute;
+    top: 40%;
+    margin-left: 60%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.prevSlide {
+    left: -2rem;
+
+}
+
+.nextSlide {
+    right: -2rem;
+}
+
+.content__clain {
+
+    font-size: 64px;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.content__subclain {
+    font-size: 36px;
+    margin: 0.5rem 0;
+    margin-bottom: 2rem;
+
+}
+
+.footer-wrapper {
+    background-color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+}
+.footer__widget {
+    font-size: 24px;
+}
+
+.footer__widget__title {
+    color: var(--accent-color);
+    margin: 0 0 1rem 0;
+
+}
+
+.footer__widget__text {
+    margin: 0;
+}
+
+ @media screen and (max-width: 1280px) {
+    .header, .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        margin-top: 1.5rem;
+    }
+    
+    .content {
+        align-items: center;
+    }
+
+    .footer__widget {
+        margin-bottom: 1rem;
+    }
+ }
